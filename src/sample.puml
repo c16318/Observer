@@ -1,0 +1,36 @@
+@startuml
+Interface Observer
+Observer : update
+class DigitObserver{
+    update()
+}
+class GraphObserver{
+    update()
+}
+
+class NumberGenerator{
+    observers
+    addObserver()
+    deleteObserver()
+    notifyObservers()
+    getNumber()
+    execute()
+
+    
+}
+class RandomNumberGenerator{
+    random
+    number
+    getNumber()
+    execute()
+    
+}
+class IncrementalNumberGenerator{
+}
+
+Observer <|-- DigitObserver
+Observer <|-- GraphObserver
+Observer "Notifies" <---o NumberGenerator
+NumberGenerator <|- RandomNumberGenerator 
+NumberGenerator <|- IncrementalNumberGenerator
+@enduml
