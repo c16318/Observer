@@ -26,7 +26,9 @@ public class KofuGenerator extends Generator{
     
     //乱数を発生させて、観察者に通知
     public void execute(){
-        number += 1;
-        notifyObservers();
+        for(int i = 0;i < 5;i++){
+            number += 1;
+            notifyObservers();
+        }
     }
 }

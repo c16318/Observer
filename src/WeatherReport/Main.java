@@ -21,10 +21,10 @@ public class Main {
         Kofugenerator.addObserver(Tempobserver);
         Tokyogenerator.addObserver(Tempobserver);
         
-        for(int i = 0;i < 10;i++){
+       // for(int i = 0;i < 10;i++){
             Kofugenerator.execute();
             Tokyogenerator.execute();
             System.out.println();
-        }
+       // }
     }
 }
