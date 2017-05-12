@@ -13,6 +13,18 @@ package WeatherReport;
  */
 public class Main {
     public static void main(String[] args){
+        Generator Kofugenerator = new KofuGenerator();
+        Generator Tokyogenerator = new TokyoGenerator();
+        Observer Tempobserver = new TempObserver();
+      //  Observer Tokyoobserver = new TokyoObserver();
         
+        Kofugenerator.addObserver(Tempobserver);
+        Tokyogenerator.addObserver(Tempobserver);
+        
+        for(int i = 0;i < 10;i++){
+            Kofugenerator.execute();
+            Tokyogenerator.execute();
+            System.out.println();
+        }
     }
 }
